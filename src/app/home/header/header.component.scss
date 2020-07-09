@@ -1,17 +1,46 @@
 @import "../../../sass/var";
-
+// nav
+.nav {
+  padding: 5px 20px;
+  width: 100%;
+  height: 7.5rem;
+  display: grid;
+  grid-template-columns: 100px 1fr 25%;
+  align-items: center;
+  column-gap: 25px;
+  &__logo-img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.2);
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: rgba($color-light, .7);
+  }
+}
+// header
 .header {
-  background-color: $color-secondary;
-  height: 100vh;
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(20%, $color-secondary),color-stop(90%,$color-dark-2));
+  min-height: 100vh;
   width: 100%;
   position: relative;
-  display: grid;
-  grid-template-columns: 42% 1fr;
-  column-gap: 50px;
-  align-items: center;
-  padding: 0 60px;
-  &__col {
 
+  &__content {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    column-gap: 50px;
+    align-items: center;
+    padding: 0 60px;
+
+  }
+  &__col {
+    overflow: hidden;
   }
   &__text {
     position: relative;
@@ -74,5 +103,6 @@
   &__illustration {
     width: 100%;
     transform: scale(1.2) skewY(20deg);
+
   }
 }
