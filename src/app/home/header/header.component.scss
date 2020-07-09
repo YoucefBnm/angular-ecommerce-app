@@ -1,0 +1,78 @@
+@import "../../../sass/var";
+
+.header {
+  background-color: $color-secondary;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  column-gap: 50px;
+  align-items: center;
+  padding: 0 60px;
+  &__col {
+
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+  &__heading {
+    line-height: 1.2;
+    font-weight: 300;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    span {
+      font-weight: 600;
+    }
+  }
+  &__paragraph {
+    color: rgba(#fff, .7);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    span {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: center;
+    user-select: none;
+    border: 1px solid $color-primary;
+    transition: background-color 0.25s ease-in-out,border-color 0.25s ease-in-out;
+    font-size: 1.0625rem;
+    background-color: $color-primary;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    line-height: 1.5;
+    border-radius: .4375rem;
+
+    &:hover {
+      background-color: darken($color: $color-primary, $amount: 20%);
+      border-color: darken($color: $color-primary, $amount: 20%);
+    }
+    &:hover i {
+      transform: translateX(2px);
+    }
+    i {
+      display: inline-block;
+      font-size: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      margin-left: .5rem;
+      font-size: .9rem;
+      transition: all .25s ease-in-out;
+    }
+
+  }
+  &__illustration {
+    width: 100%;
+    transform: scale(1.2) skewY(20deg);
+  }
+}
