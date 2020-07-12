@@ -29,7 +29,7 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
-
+  padding-bottom: 15rem;
   &__content {
     margin-top: 3.5rem;
     display: grid;
@@ -39,9 +39,7 @@
     padding: 0 60px;
 
   }
-  &__col {
-    overflow: hidden;
-  }
+
   &__text {
     position: relative;
     z-index: 2;
@@ -61,7 +59,7 @@
     font-weight: 300;
     margin-bottom: 3rem;
     span {
-      color: #fff;
+      color: $color-primary;
       font-weight: 500;
     }
   }
