@@ -1,0 +1,72 @@
+<section class="products" *ngIf='products && products.length'>
+  <h2 class="heading-main">{{ pageTitle }}</h2>
+  <div class="products__filter">
+    <h4>filter by</h4>
+    <input type="text">
+  </div>
+
+  <div class="products__container">
+    <div class="card"  *ngFor='let product of products'>
+      <button class="card__wishlist">
+        <i class="fa fa-heart-o"></i>
+      </button>
+      <!--  -->
+
+      <div class="card__body">
+        <p class="card__category">{{ product.category }}</p>
+        <h3 class="card__title">{{ product.productName }}</h3>
+      </div>
+
+      <div class="card__footer">
+        <div class="card__price"><span>{{ product.price }}$</span></div>
+        <div class="card__rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      </div>
+      <div class="card__btns">
+        <a href="#" class="card__add-cart">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+        <a href="#" class="card__view">
+          <i class="fa fa-eye"></i>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="card">
+      <button class="card__wishlist">
+        <i class="fa fa-heart-o"></i>
+      </button>
+      <a href="#" class="card__img">
+        <img src="/assets/acer.jpg" alt="">
+      </a>
+      <div class="card__body">
+        <p class="card__category">category</p>
+        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+      </div>
+      <div class="card__footer">
+        <div class="card__footer-row">
+          <div class="card__price"><span>198.00$</span></div>
+          <div class="card__rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+        <div class="card__btns">
+          <a href="#" class="card__add-cart">
+            <i class="fa fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="card__view">
+            <i class="fa fa-eye"></i>
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
