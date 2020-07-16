@@ -10,7 +10,9 @@
       <button class="card__wishlist">
         <i class="fa fa-heart-o"></i>
       </button>
-      <!--  -->
+      <a href="" class="card__img">
+        <img [src]='product.imageUrl' [title]='product.productName' [alt]='product.productName'>
+      </a>
 
       <div class="card__body">
         <p class="card__category">{{ product.category }}</p>
@@ -18,7 +20,7 @@
       </div>
 
       <div class="card__footer">
-        <div class="card__price"><span>{{ product.price }}$</span></div>
+        <div class="card__price"><span>{{ product.price }}</span></div>
         <div class="card__rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>

@@ -181,7 +181,7 @@ export class ProductListComponent {
         "Battery": "up to 7.5 Hours Battery Life",
         "power supply": 65
       },
-      "imageUrl": "assets/prod-desktop-pc.jpg"
+      "imageUrl": "assets/prod-asus-vivo.jpg"
     },
     {
       "productId": 9,
