@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
+  ngOnInit(): void {
+    this.products.forEach(product => this.categories.push(product.category))
+    this.categories = [...new Set(this.categories)];
+    console.log(this.categories)
+  }
   pageTitle: string = 'Product List';
+  categories: any[] = [];
   listFilter: string = '';
   products: any[] = [
     {

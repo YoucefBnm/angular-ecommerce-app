@@ -4,9 +4,11 @@
     <h4>filter by: {{listFilter}}</h4>
     <input type="text" [(ngModel)]='listFilter'>
 
-    <!-- <div class="products__categories">
-      <p *ngFor="let category of products">{{category.category}}</p>
-    </div> -->
+    <ul class="products__categories">
+      <li *ngFor='let category of categories'>
+        <button>{{ category }}</button>
+      </li>
+    </ul>
   </div>
 
   <div class="products__container">
@@ -35,10 +37,10 @@
       </div>
       <div class="card__btns">
         <a href="#" class="card__add-cart">
-          <i class="fa fa-shopping-cart"></i>
+          <i class="fa fa-shopping-cart" title="add to cart"></i>
         </a>
         <a href="#" class="card__view">
-          <i class="fa fa-eye"></i>
+          <i class="fa fa-eye" title="view product"></i>
         </a>
       </div>
     </div>
