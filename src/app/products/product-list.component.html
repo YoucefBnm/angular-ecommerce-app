@@ -1,8 +1,12 @@
 <section class="products" *ngIf='products && products.length'>
   <h2 class="heading-main">{{ pageTitle }}</h2>
   <div class="products__filter">
-    <h4>filter by</h4>
-    <input type="text">
+    <h4>filter by: {{listFilter}}</h4>
+    <input type="text" [(ngModel)]='listFilter'>
+
+    <!-- <div class="products__categories">
+      <p *ngFor="let category of products">{{category.category}}</p>
+    </div> -->
   </div>
 
   <div class="products__container">
