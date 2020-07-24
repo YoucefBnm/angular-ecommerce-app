@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IProduct } from './product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
   categories: any[] = [];
   listFilter: string = '';
-  products: any[] = [
+  products: IProduct[] = [
     {
       "productId": 1,
       "productName": "Acer Aspire 5 Slim Laptop",
@@ -40,7 +40,6 @@ export class ProductListComponent implements OnInit {
       "productId": 2,
       "productName": "Acer Nitro 5 Gaming Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 680.00,
       "starRating": 4.5,
@@ -62,7 +61,6 @@ export class ProductListComponent implements OnInit {
       "productId": 3,
       "productName": "Lenovo Flex 5 14 2-in-1 Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 680.00,
       "starRating": 4.5,
@@ -84,7 +82,6 @@ export class ProductListComponent implements OnInit {
       "productId": 4,
       "productName": "Acer Predator Helios 300 Gaming Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 680.00,
       "starRating": 4.5,
@@ -106,7 +103,6 @@ export class ProductListComponent implements OnInit {
       "productId": 5,
       "productName": "ASUS VivoBook 15 Thin and Light Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 398.99,
       "starRating": 4.5,
@@ -128,7 +124,6 @@ export class ProductListComponent implements OnInit {
       "productId": 6,
       "productName": "Lenovo Chromebook C330 2-in-1 Convertible Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 299.99,
       "starRating": 4.2,
@@ -150,7 +145,6 @@ export class ProductListComponent implements OnInit {
       "productId": 7,
       "productName": "iBUYPOWER Gaming PC Computer Desktop Element 9260",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 299.99,
       "starRating": 4.2,
@@ -172,7 +166,6 @@ export class ProductListComponent implements OnInit {
       "productId": 8,
       "productName": "ASUS VivoBook L203MA Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "5.6 Full HD IPS Display",
       "price": 316.60,
       "starRating": 4,
@@ -194,7 +187,6 @@ export class ProductListComponent implements OnInit {
       "productId": 9,
       "productName": "Microsoft Surface Pro 7",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 316.60,
       "starRating": 4,
@@ -216,7 +208,6 @@ export class ProductListComponent implements OnInit {
       "productId": 10,
       "productName": "ASUS VivoBook 15 Thin and Light Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 479.99,
       "starRating": 4,
@@ -238,7 +229,6 @@ export class ProductListComponent implements OnInit {
       "productId": 11,
       "productName": "Acer Aspire TC-885-UA91 Desktop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 419.99,
       "starRating": 4,
@@ -260,7 +250,6 @@ export class ProductListComponent implements OnInit {
       "productId": 12,
       "productName": "2020 HP 15 15.6 HD Touchscreen Premium Laptop",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 698.00,
       "starRating": 4,
@@ -282,7 +271,6 @@ export class ProductListComponent implements OnInit {
       "productId": 12,
       "productName": "HP 21.5-Inch All-in-One Computer",
       "category": "computers & tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 421.58,
       "starRating": 4,
@@ -304,7 +292,6 @@ export class ProductListComponent implements OnInit {
       "productId": 13,
       "productName": "Lenovo Tab M10 Plus, 10.3 FHD Android Tablet",
       "category": "tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 421.58,
       "starRating": 4,
@@ -322,7 +309,6 @@ export class ProductListComponent implements OnInit {
       "productId": 14,
       "productName": "Dragon Touch K10 Tablet",
       "category": "tablets",
-      "releaseDate": "March 19, 2019",
       "description": "32 GB Wifi Android 9.0 Pie Tablet Black (2019) - SM-T290NZKAXAR",
       "price": 421.58,
       "starRating": 4,
@@ -340,7 +326,6 @@ export class ProductListComponent implements OnInit {
       "productId": 15,
       "productName": "SanDisk Ultra 128GB microSDXC",
       "category": "microSD",
-      "releaseDate": "March 19, 2019",
       "description": "UHS-I card with Adapter - 100MB/s U1 A1 - SDSQUAR-128G-GN6MA",
       "price": 21.99,
       "starRating": 4,
@@ -353,88 +338,96 @@ export class ProductListComponent implements OnInit {
       "productId": 16,
       "productName": "Brother Genuine High Yield Toner Cartridge",
       "category": "Toner",
-      "releaseDate": "March 19, 2019",
       "description": "TN660, Replacement Black Toner, Page Yield Up To 2,600 Pages, Amazon Dash Replenishment Cartridge",
       "price": 55.48,
       "starRating": 4.5,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-toner.jpg"
     },
     {
       "productId": 17,
       "productName": "Logitech M510 Wireless Computer Mouse",
       "category": "computer accessoires",
-      "releaseDate": "March 19, 2019",
       "description": "Comfortable Shape with USB Unifying Receiver, with Back/Forward Buttons and Side-to-Side Scrolling, Dark Gray",
       "price": 12.99,
       "starRating": 4.5,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-mouse.jpg"
     },
     {
       "productId": 18,
       "productName": "HOVAMP iPhone Charger",
       "category": "computer accessoires",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "price": 12.99,
       "starRating": 3.9,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-cable.jpg"
     },
     {
       "productId": 19,
       "productName": "USB Type C Cable",
       "category": "computer accessoires",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "Anker [2-Pack, 6 ft] Premium Nylon USB-A to USB-C Fast Charging Type C Cable, for Galaxy S10 Note 8, LG V20 and Other USB C Charger",
       "price": 17.99,
       "starRating": 4.4,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-cable-2.jpg"
     },
     {
       "productId": 20,
       "productName": "Logitech USB Headset H390 with Noise Cancelling Mic",
       "category": "audio & video",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "Logitech USB Headset H390 with Noise Cancelling Mic",
       "price": 56.98,
       "starRating": 4.4,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-headphones.jpg"
     },
     {
       "productId": 21,
       "productName": "Logitech M570 Wireless Trackball Mouse",
       "category": "computer accessoires",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "Trackball Mouse – Ergonomic Design with Sculpted Right-Hand Shape, Compatible with Apple Mac and Microsoft Windows Computers, USB Unifying Receiver, Dark Gray",
       "price": 39.00,
       "starRating": 4.6,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-mouse-2.jpg"
     },
     {
       "productId": 22,
       "productName": "Logitech BRIO Ultra HD Webcam",
       "category": "audio & video",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "Logitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and Streaming - Black",
       "price": 289.95,
       "starRating": 4,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-camera.jpg"
     },
     {
       "productId": 23,
       "productName": "Syntech USB C to USB Adapter (2 Pack)",
       "category": "computer accessoires",
-      "releaseDate": "MFi Certified Lightning Cable 5 Pack (3/3/6/6/10FT) Nylon Woven with Metal Connector Compatible iPhone 11/Pro/Xs Max/X/8/7/Plus/6S/6/SE/5S iPad - Silver&White",
       "description": "Thunderbolt 3 to USB 3.0 Adapter Compatible with MacBook Pro 2019 and Before, MacBook Air 2020, iPad Pro 2020, Dell XPS and More Type C Devices, Space Grey",
       "price": 9.99,
       "starRating": 4.5,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-usb.jpg"
     },
     {
@@ -444,7 +437,9 @@ export class ProductListComponent implements OnInit {
       "description": "Flat Internet Network Lan patch cords – Solid Cat6 High Speed Computer wire With clips& Snagless Rj45 Connectors for Router, modem – faster than Cat5e/Cat5 - 50 feet",
       "price": 18.99,
       "starRating": 4.5,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-ethernet.jpg"
     },
     {
@@ -454,7 +449,9 @@ export class ProductListComponent implements OnInit {
       "description": "Logitech C270 3MP 1280 x 720pixels USB 2.0 Black Webcam",
       "price": 52.99,
       "starRating": 3.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-camera-2.jpg"
     },
     {
@@ -464,7 +461,9 @@ export class ProductListComponent implements OnInit {
       "description": "Webcam with Microphone, 1080P HD Streaming USB Computer Webcam [Plug and Play] [30fps] for PC Video Conferencing/Calling/Gaming, Laptop/Desktop Mac, Skype/YouTube/Zoom/Facetime(Yellow) (Black)",
       "price": 34.99,
       "starRating": 4.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-camera-3.jpg"
     },
     {
@@ -474,7 +473,9 @@ export class ProductListComponent implements OnInit {
       "description": "Cyber Acoustics Stereo Headset, Headphone with Microphone, Great for K12 School Classroom and Education (AC-204), Gold",
       "price": 12.60,
       "starRating": 4.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-camera-3.jpg"
     },
     {
@@ -484,7 +485,9 @@ export class ProductListComponent implements OnInit {
       "description": "Logitech Speaker System Z323 with Subwoofer",
       "price": 49.99,
       "starRating": 4.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-speaker.jpg"
     },
     {
@@ -494,7 +497,9 @@ export class ProductListComponent implements OnInit {
       "description": "Logitech Speaker System Z323 with Subwoofer",
       "price": 19.99,
       "starRating": 4.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-speaker-2.jpg"
     },
     {
@@ -504,7 +509,9 @@ export class ProductListComponent implements OnInit {
       "description": "Plantronics Voyager Focus UC Bluetooth USB B825 202652-01 Headset with Active Noise Cancelling",
       "price": 219.00,
       "starRating": 4.8,
+      "about": {
 
+      },
       "imageUrl": "assets/prod-headphones-3.jpg"
     }
   ];
