@@ -13,7 +13,17 @@ export class ProductListComponent implements OnInit {
   }
   pageTitle: string = 'Product List';
   categories: any[] = [];
-  listFilter: string = '';
+
+  _listFilter: string = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value:string) {
+    this._listFilter = value;
+    this.filtredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
+  }
+  filtredProducts: IProduct[];
+
   products: IProduct[] = [
     {
       "productId": 1,
@@ -515,4 +525,16 @@ export class ProductListComponent implements OnInit {
       "imageUrl": "assets/prod-headphones-3.jpg"
     }
   ];
+
+  constructor() {
+    this.filtredProducts = this.products;
+    this.listFilter = '';
+  }
+
+  performFilter(filterBy: string): IProduct[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((product: IProduct) =>
+      product.productName.toLocaleLowerCase().indexOf(filterBy) !== - 1);
+  }
+
 }
