@@ -28,11 +28,7 @@
       <div class="card__footer">
         <div class="card__price"><span>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</span></div>
         <div class="card__rating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <app-star [rating]='product.starRating'></app-star>
         </div>
       </div>
       <div class="card__btns">

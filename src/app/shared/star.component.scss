@@ -1,0 +1,19 @@
+.crop {
+  overflow: hidden;
+}
+div {
+  cursor: pointer;
+}
+.rating {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1;
+  vertical-align: middle;
+
+  i{
+    color: #fea569;
+    margin-right: .1875rem;
+    font-size: .75rem;
+
+  }
+}
